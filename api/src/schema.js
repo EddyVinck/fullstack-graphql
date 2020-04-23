@@ -18,6 +18,7 @@ const typeDefs = gql`
   type Query {
     pet(id: ID!): Pet
     pets(input: PetInput): [Pet]!
+    user: User!
   }
 
   type Mutation {
@@ -32,6 +33,7 @@ const typeDefs = gql`
     name: String
     type: PetType
     img: String
+    owner: User
   }
   input PetInput {
     type: PetType
@@ -44,6 +46,7 @@ const typeDefs = gql`
   type User {
     id: ID!
     username: String!
+    pets: [Pet]!
   }
 
   # ⤵ this is just example schema, not fully implemented in resolvers
@@ -100,6 +103,53 @@ const unionExample = gql`
       ... on Shirt {
         color
       }
+    }
+  }
+`;
+
+const relationExample = gql`
+  query {
+    pet(id: "3") {
+      owner {
+        username
+      }
+    }
+  }
+`;
+
+const otherExamples = gql`
+  query allPets {
+    pets {
+      id
+      name
+      type
+      createdAt
+      img # from resolver, not in db
+    }
+  }
+
+  query allDogs {
+    pets(input: { type: DOG }) {
+      id
+      name
+      createdAt
+      img
+    }
+  }
+
+  query singlePet {
+    pet(id: "1") {
+      id
+      name
+      type
+    }
+  }
+
+  mutation createPet {
+    createPet(input: { name: "Bobby", type: DOG }) {
+      id
+      name
+      type
     }
   }
 `;
