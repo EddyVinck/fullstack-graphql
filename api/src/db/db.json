@@ -3,5 +3,60 @@
     "id": "jBWMVGjm50l6LGwepDoty",
     "username": "frontendmaster"
   },
-  "pet": []
+  "pet": [
+    {
+      "id": "1",
+      "createdAt": "56456465489",
+      "type": "DOG",
+      "name": "Charlie"
+    },
+    {
+      "id": "2",
+      "createdAt": "56456465489",
+      "type": "DOG",
+      "name": "Max"
+    },
+    {
+      "id": "3",
+      "createdAt": "56456465489",
+      "type": "DOG",
+      "name": "Buddy"
+    },
+    {
+      "id": "4",
+      "createdAt": "56456465489",
+      "type": "DOG",
+      "name": "Toby"
+    },
+    {
+      "id": "5",
+      "createdAt": "56456465489",
+      "type": "CAT",
+      "name": "Kitty"
+    },
+    {
+      "id": "6",
+      "createdAt": "56456465489",
+      "type": "CAT",
+      "name": "Garfield"
+    },
+    {
+      "id": "5Bh6ynJwjMuKZd91c2C5k",
+      "createdAt": 1587632130020,
+      "name": "Bobby",
+      "type": "BIRD"
+    },
+    {
+      "id": "YfnGzHBZ0TkBubvpFcx10",
+      "createdAt": 1587634093633,
+      "name": "Bobby",
+      "type": "BIRD"
+    },
+    {
+      "id": "2lDsH9VQTIgQS9pdvpdt-",
+      "createdAt": 1587634113386,
+      "name": "Bobby",
+      "type": "DOG"
+    }
+  ]
 }
